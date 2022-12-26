@@ -26,10 +26,11 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: drop server
+      run: sudo kill -9 `sudo lsof -t -i:8080`
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build
-    - name: Ejecute jar file
-      run: sudo kill -9 `sudo lsof -t -i:8080` & sudo java -jar actions-runner/_work/users-recipes/users-recipes/build/libs/recipe-0.0.1-SNAPSHOT.war
-
+    - name: Execute war file
+      run: sudo java -jar actions-runner/_work/users-recipes/users-recipes/build/libs/recipe-0.0.1-SNAPSHOT.war
