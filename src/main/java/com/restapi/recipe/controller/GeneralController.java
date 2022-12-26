@@ -13,6 +13,6 @@ public class GeneralController {
 
     @GetMapping
     public String gretting(){
-        return "Welcome to Api recipes service.";
+        return "Welcome to Api Recipes Service.";
     }
 }
