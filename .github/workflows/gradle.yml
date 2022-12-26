@@ -33,4 +33,4 @@ jobs:
       with:
         arguments: build
     - name: Execute war file
-      run: sudo java -jar actions-runner/_work/users-recipes/users-recipes/build/libs/recipe-0.0.1-SNAPSHOT.war
+      run: sudo java -jar /home/ec2-user/actions-runner/_work/users-recipes/users-recipes/build/libs/recipe-0.0.1-SNAPSHOT.war
