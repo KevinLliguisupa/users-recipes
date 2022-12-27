@@ -30,7 +30,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 
-    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.12'
+//    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.12'
 
     //Maven security crypto
 // https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto
