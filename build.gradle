@@ -33,9 +33,12 @@ dependencies {
 //    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.12'
 
     //Maven security crypto
-// https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto
     implementation group: 'org.springframework.security', name: 'spring-security-crypto', version: '5.7.3'
 
+    //Junit
+// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2'
 
 
 

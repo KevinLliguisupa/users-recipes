@@ -2,7 +2,7 @@ package com.restapi.recipe.util;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
-public class encryptUtility {
+public class encryptionUtility {
 
     public static String encryptPassword(String password) {
         return BCrypt.hashpw(password, BCrypt.gensalt());

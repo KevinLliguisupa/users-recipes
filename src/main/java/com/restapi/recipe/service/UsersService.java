@@ -4,7 +4,7 @@ import com.restapi.recipe.dto.UsersInfoDTO;
 import com.restapi.recipe.model.Users;
 import com.restapi.recipe.repository.UsersRepository;
 import com.restapi.recipe.specification.UsersSpecification;
-import com.restapi.recipe.util.encryptUtility;
+import com.restapi.recipe.util.encryptionUtility;
 import com.restapi.recipe.vo.UsersInsertVO;
 import com.restapi.recipe.vo.UsersLoginVO;
 import com.restapi.recipe.vo.UsersUpdateVO;
@@ -54,7 +54,7 @@ public class UsersService {
     public int login(UsersLoginVO userVO) {
         try {
             Users originalUser = requireOneByEmail(userVO.getUsrEmail());
-            if (!encryptUtility.comparePasswords(userVO.getUsrPassword(), originalUser.getUsrPassword())) {
+            if (!encryptionUtility.comparePasswords(userVO.getUsrPassword(), originalUser.getUsrPassword())) {
                 return 3;
             }
         } catch (Exception e) {
@@ -65,7 +65,7 @@ public class UsersService {
     }
 
     public UsersInfoDTO save(UsersInsertVO userVO) {
-        userVO.setUsrPassword(encryptUtility.encryptPassword(userVO.getUsrPassword()));
+        userVO.setUsrPassword(encryptionUtility.encryptPassword(userVO.getUsrPassword()));
         Users bean = new Users();
 
         BeanUtils.copyProperties(userVO, bean);
