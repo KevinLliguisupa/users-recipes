@@ -1,4 +1,4 @@
-package com.restapi.recipe.model;
+package com.restapi.recipe.entities;
 
 import lombok.Data;
 
@@ -10,8 +10,8 @@ import java.io.Serializable;
  */
 @Data
 @Entity
-@Table(name = "users")
-public class Users implements Serializable {
+@Table(name = "\"user\"")
+public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
