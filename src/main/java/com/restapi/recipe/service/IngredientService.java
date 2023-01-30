@@ -45,6 +45,11 @@ public class IngredientService {
         return toPage(ingredientsList);
     }
 
+    public IngredientDTO getById(Long id) {
+        Ingredient original = requireOne(id);
+        return toDTO(original);
+    }
+
     public IngredientDTO save(IngredientInsertVO vO) {
         Ingredient bean = new Ingredient();
         BeanUtils.copyProperties(vO, bean);
@@ -64,10 +69,6 @@ public class IngredientService {
         return toDTO(bean);
     }
 
-    public IngredientDTO getById(Long id) {
-        Ingredient original = requireOne(id);
-        return toDTO(original);
-    }
 
     private IngredientDTO toDTO(Ingredient original) {
         IngredientDTO bean = new IngredientDTO();

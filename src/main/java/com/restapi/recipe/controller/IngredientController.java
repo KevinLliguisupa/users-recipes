@@ -37,17 +37,12 @@ public class IngredientController {
 
     @PostMapping
     public ResponseEntity<IngredientDTO> save(@Valid @RequestBody IngredientInsertVO vO) {
-        return ResponseEntity.status(HttpStatus.OK).body(ingredientService.save(vO));
+        return ResponseEntity.status(HttpStatus.CREATED).body(ingredientService.save(vO));
     }
 
-//    @DeleteMapping("/{id}")
-//    public void delete(@Valid @NotNull @PathVariable("id") Long id) {
-//        ingredientService.delete(id);
-//    }
-
     @PutMapping("/{id}")
-    public void update(@Valid @NotNull @PathVariable("id") Long id,
+    public ResponseEntity<IngredientDTO> update(@Valid @NotNull @PathVariable("id") Long id,
                        @Valid @RequestBody IngredientUpdateVO vO) {
-        ingredientService.update(id, vO);
+        return ResponseEntity.status(HttpStatus.OK).body(ingredientService.update(id, vO));
     }
 }
