@@ -80,11 +80,11 @@ public class UsersController {
         return ResponseEntity.status(HttpStatus.OK).body(userService.changeState(id));
     }
 
-//    @DeleteMapping("/{id}")
-//    public ResponseEntity<Object> delete(@Valid @NotNull @PathVariable("id") Long id) {
-//        userService.delete(id);
-//        return ResponseEntity.status(HttpStatus.OK).body("Successfully deleted user: " + id);
-//    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Object> delete(@Valid @NotNull @PathVariable("id") Long id) {
+        userService.delete(id);
+        return ResponseEntity.status(HttpStatus.OK).body("Successfully deleted user: " + id);
+    }
 
     /*    //**
      * Method to find using custom repository

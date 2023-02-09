@@ -95,9 +95,9 @@ public class UserService {
         return toUserInfoDto(bean);
     }
 
-//    public void delete(Long id) {
-//        usersRepository.deleteById(id);
-//    }
+    public void delete(Long id) {
+        usersRepository.deleteById(id);
+    }
 
     public Page<UserInfoDTO> toPageUserInfoDto(Page<User> original) {
         return original.map(this::toUserInfoDto);
