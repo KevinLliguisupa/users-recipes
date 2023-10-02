@@ -1,13 +1,15 @@
 package com.restapi.recipe.vo;
 
+
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
-
 @Data
-public class UsersInsertVO implements Serializable {
+@EqualsAndHashCode(callSuper = false)
+public class UserUpdateVO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @NotNull(message = "usrNickname can not null")
@@ -15,9 +17,6 @@ public class UsersInsertVO implements Serializable {
 
     @NotNull(message = "usrEmail can not null")
     private String usrEmail;
-
-    @NotNull(message = "usrPassword can not null")
-    private String usrPassword;
 
     @NotNull(message = "usrAvatar can not null")
     private String usrAvatar;

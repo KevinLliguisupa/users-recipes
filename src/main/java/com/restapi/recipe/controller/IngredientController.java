@@ -16,7 +16,7 @@ import javax.validation.constraints.NotNull;
 
 @Validated
 @RestController
-@RequestMapping("/ingredient")
+@RequestMapping("/v1/ingredient")
 public class IngredientController {
 
     @Autowired

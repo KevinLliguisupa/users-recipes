@@ -1,7 +1,6 @@
 package com.restapi.recipe.vo;
 
 
-import com.restapi.recipe.model.Ingredient;
 import lombok.*;
 
 import javax.validation.constraints.NotNull;

@@ -1,7 +1,7 @@
 package com.restapi.recipe.service;
 
 import com.restapi.recipe.dto.IngredientDTO;
-import com.restapi.recipe.model.Ingredient;
+import com.restapi.recipe.entities.Ingredient;
 import com.restapi.recipe.repository.IngredientRepository;
 import com.restapi.recipe.specification.IngredientSpecification;
 import com.restapi.recipe.vo.IngredientInsertVO;

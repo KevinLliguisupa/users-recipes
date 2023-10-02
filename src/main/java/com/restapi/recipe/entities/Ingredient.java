@@ -1,4 +1,4 @@
-package com.restapi.recipe.model;
+package com.restapi.recipe.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

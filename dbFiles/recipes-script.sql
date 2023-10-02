@@ -12,21 +12,21 @@ CREATE TABLE public.ingredient (
 
 ALTER SEQUENCE public.ingredient_ing_id_seq OWNED BY public.ingredient.ing_id;
 
-CREATE SEQUENCE public.users_usr_id_seq;
+CREATE SEQUENCE public.user_usr_id_seq;
 
-CREATE TABLE public.users (
-                usr_id INTEGER NOT NULL DEFAULT nextval('public.users_usr_id_seq'),
+CREATE TABLE public.user (
+                usr_id INTEGER NOT NULL DEFAULT nextval('public.user_usr_id_seq'),
                 usr_nickname VARCHAR NOT NULL,
                 usr_email VARCHAR NOT NULL,
                 usr_password VARCHAR NOT NULL,
                 usr_avatar VARCHAR NOT NULL,
                 usr_name VARCHAR NOT NULL,
                 usr_state BOOLEAN NOT NULL,
-                CONSTRAINT users_pk PRIMARY KEY (usr_id)
+                CONSTRAINT user_pk PRIMARY KEY (usr_id)
 );
 
 
-ALTER SEQUENCE public.users_usr_id_seq OWNED BY public.users.usr_id;
+ALTER SEQUENCE public.user_usr_id_seq OWNED BY public.user.usr_id;
 
 CREATE SEQUENCE public.recipe_rec_id_seq;
 
@@ -67,7 +67,7 @@ NOT DEFERRABLE;
 
 ALTER TABLE public.recipe ADD CONSTRAINT user_recipe_fk
 FOREIGN KEY (usr_id)
-REFERENCES public.users (usr_id)
+REFERENCES public.user (usr_id)
 ON DELETE NO ACTION
 ON UPDATE CASCADE
 NOT DEFERRABLE;

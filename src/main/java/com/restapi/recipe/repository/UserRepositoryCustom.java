@@ -1,10 +1,10 @@
 package com.restapi.recipe.repository;
 
-import com.restapi.recipe.model.Users;
+import com.restapi.recipe.entities.User;
 
 import java.util.List;
 
-public interface UsersRepositoryCustom {
+public interface UserRepositoryCustom {
 
     /**
      * Find users by their state this can "true" or "false"
@@ -12,6 +12,6 @@ public interface UsersRepositoryCustom {
      * @param state Boolean the state of the user
      * @return list of users that have the specified status
      */
-    List<Users> findByState(Boolean state);
+    List<User> findByState(Boolean state);
 
 }

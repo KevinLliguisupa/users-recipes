@@ -1,6 +1,6 @@
 package com.restapi.recipe.specification;
 
-import com.restapi.recipe.model.Ingredient;
+import com.restapi.recipe.entities.Ingredient;
 import org.springframework.data.jpa.domain.Specification;
 
 public class IngredientSpecification{
